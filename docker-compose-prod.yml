@@ -1,5 +1,5 @@
 services:
-  t4g:
+  braine:
     image: braine:latest
     env_file: .env
     deploy:
