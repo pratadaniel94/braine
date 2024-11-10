@@ -43,7 +43,7 @@
     </nav>
     <div class="container-xl mt-5">
         <div class="row">
-          <div class="col-md-3 col-lg-2 p-3 bg-user shadow-sm p-3">
+          <div class="col-md-3 col-lg-2 p-3 bg-user shadow-sm p-3 mt-3">
             <div class="d-flex flex-column align-items-center mb-4">
               <img src="{% static 'img/user.webp' %}" class="img-fluid rounded-circle mb-2" alt="Foto de Perfil" style="width: 130px;">
               <h5>João Silva</h5>
@@ -64,7 +64,7 @@
             </div>
           </div>
     
-          <div class="col-md-9 col-lg-10">
+          <div class="col-md-9 col-lg-10 mt-3">
             <div class="card shadow-sm rounded-3">
               <div class="card-header text-center">
                 <h4>Braine Chat</h4>
@@ -134,7 +134,7 @@
                     chatBox.innerHTML += `
                         <div class="d-flex flex-row mb-2 justify-content-end  mt-5 me-5">
                             <div class="p-3 bg-chat-client rounded-3">
-                                <strong>Você:</strong> ${message}
+                                <strong>You:</strong> ${message}
                             </div>
                         </div>
                     `;
@@ -163,7 +163,7 @@
                         chatBox.innerHTML += `
                             <div class="d-flex flex-row mb-2 justify-content-start">
                                 <div class="p-3 bg-chat-bruna rounded-3">
-                                    <strong>Bruna:</strong> Desculpe, algo deu errado.
+                                    <strong>Bruna:</strong> Sorry, something went wrong.
                                 </div>
                             </div>
                         `;
@@ -175,7 +175,7 @@
                     chatBox.innerHTML += `
                         <div class="d-flex flex-row mb-2 justify-content-start">
                             <div class="p-3 bg-chat-bruna rounded-3">
-                                <strong>Bruna:</strong> Houve um erro ao se comunicar com o servidor.
+                                <strong>Bruna:</strong> There was an error communicating with the server.
                             </div>
                         </div>
                     `;
