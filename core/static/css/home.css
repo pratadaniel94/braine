@@ -1,5 +1,6 @@
 .bg-nav-braine {
-  background: black;
+  background: #D35482;
+  color: white !important;
 }
 .bg-chat-bruna-init {
   background: #D35482;
@@ -12,6 +13,10 @@
 .bg-chat-client {
   background: #eddada;
   color: black
+}
+.bg-user {
+  background: #eddada;
+  border-radius: 10px;
 }
 .btn-brain-send {
   background: #D35482;
