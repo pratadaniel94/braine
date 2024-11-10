@@ -22,3 +22,15 @@
   width: 60px;                   /* Largura do botão */
   height: 60px;
 }
+
+.menu-client {
+}
+.menu-client:hover {
+  background: #D35482 !important;
+}
+.menu-exit {
+
+}
+.menu-exit:hover {
+  background: #D35482 !important;
+}

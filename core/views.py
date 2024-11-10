@@ -23,6 +23,6 @@ def chat_with_llama(request):
 
         config.setup({"AMQP_URI": cloudamqp_uri})
         with ClusterRpcProxy(context_data={"session_data": {}}) as rpc:
-            res = rpc.bruna.send(session_id, user_message)
+            res = rpc.bruna.send_help(session_id, user_message)
 
         return JsonResponse({"message": res.get("content")})
