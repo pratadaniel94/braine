@@ -23,6 +23,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://braine.t4gsolutions.com',
+    'http://localhost',
+    'http://127.0.0.1',
+]
+
 
 # Application definition
 
