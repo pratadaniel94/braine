@@ -5,6 +5,8 @@ import os
 import uuid
 from nameko import config
 from nameko.standalone.rpc import ClusterRpcProxy
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 load_dotenv()
@@ -12,6 +14,7 @@ load_dotenv()
 def home_page(request):
     return render(request, 'index.html')
 
+@csrf_exempt
 def chat_with_llama(request):
     session_id = str(uuid.uuid4())
     if request.method == "POST":
