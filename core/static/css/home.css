@@ -13,3 +13,12 @@
   background: #eddada;
   color: black
 }
+.btn-brain-send {
+  background: #D35482;
+  border-radius: 20%;
+  font-size: 2rem;
+  color: white;
+  /* padding-right: 20px; */
+  width: 60px;                   /* Largura do botão */
+  height: 60px;
+}
