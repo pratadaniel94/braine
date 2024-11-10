@@ -40,7 +40,6 @@
     <div class="container-fluid mt-5">
         <div class="row">
           <div class="col-md-3 col-lg-2 p-3 bg-light shadow-sm" style="height: 100vh;">
-            <!-- Foto de Perfil -->
             <div class="d-flex flex-column align-items-center mb-4">
               <img src="https://via.placeholder.com/100" class="rounded-circle mb-2" alt="Foto de Perfil">
               <h5>João Silva</h5>
@@ -57,31 +56,25 @@
             </div>
           </div>
     
-          <!-- Container do Chat (À Direita) -->
           <div class="col-md-9 col-lg-10">
             <div class="card shadow-sm rounded-3">
               <div class="card-header text-center">
                 <h4>Braine</h4>
               </div>
               <div class="card-body">
-                <!-- Área de mensagens -->
                 <div class="d-flex flex-column mb-3" style="height: 400px; overflow-y: scroll;" id="chatBox">
                     <div class="d-flex flex-row mb-2 justify-content-start me-5">
-                      <!-- Imagem da Bruna -->
                       <div class="p-2">
                         <img src="{% static 'img/bruna.svg' %}" alt="Foto da Bruna" style="width: 100px; height: 100px; border-radius: 50%;">
 
                       </div>
-                      <!-- Mensagem -->
-                      <div class="p-2 bg-chat-bruna-init rounded-3">
+                      <div class="p-3 bg-chat-bruna-init rounded-3 m-5">
 
-                        <strong>Bruna:</strong> Olá! Eu sou a Bruna, inteligência artificial especializada para ajudar pessoas com autismo, vamos conversar?
+                        <strong>Bruna:</strong> Olá! Eu sou a Bruna, <br>inteligência artificial especializada para ajudar pessoas com autismo, <br>vamos conversar?
                       </div>
                     </div>    
-                    <!-- Mais mensagens vão aparecer aqui -->
                   </div>
     
-                <!-- Área de input -->
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Digite sua mensagem..." id="messageInput">
                   <button class="btn btn-primary" type="button" id="sendButton">Enviar</button>
@@ -140,7 +133,6 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.message) {
-                        // Exibe a resposta do bot na interface
                         chatBox.innerHTML += `
                             <div class="d-flex flex-row mb-2 justify-content-start">
                                 <div class="p-2 bg-chat-bruna rounded-3">
@@ -157,7 +149,7 @@
                             </div>
                         `;
                     }
-                    chatBox.scrollTop = chatBox.scrollHeight; // Desce o scroll para a última mensagem
+                    chatBox.scrollTop = chatBox.scrollHeight;
                 })
                 .catch(error => {
                     console.error('Erro:', error);
@@ -172,10 +164,8 @@
                 });
             }
     
-            // Adiciona evento de clique no botão de enviar
             sendButton.addEventListener('click', sendMessage);
     
-            // Adiciona evento de pressionar "Enter" para enviar mensagem
             messageInput.addEventListener('keypress', function(event) {
                 if (event.key === 'Enter') {
                     sendMessage();
@@ -183,7 +173,6 @@
             });
         });
     </script>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
