@@ -1,15 +1,22 @@
 from pathlib import Path
+from dotenv import load_dotenv
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+CSRF_COOKIE_SECURE = False 
+CSRF_COOKIE_HTTPONLY = False 
+CSRF_COOKIE_NAME = 'csrftoken'
+CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-l*8v!s-wz6dwazthvkh-5)8y7t+)wo60&9-&dri*8)(72tf)u2'
+CLOUDAMQP_URI = os.getenv('CLOUDAMQP_URI')
+
+load_dotenv()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
